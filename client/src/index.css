@@ -11,20 +11,6 @@
     font-family: "burtons";
     src: url("../public/Burtons.otf")
 }
-.canvas-container {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%; /* Adjust as needed */
-  height: 100%; /* Adjust as needed */
-  pointer-events: none; /* Optional, depending on your use case */
-}
-html, body,#root{
-    width:100%;
-    height:100%;
-    margin: 0;
-    padding:0;
-}
 
 .radial-gradient {
     background: radial-gradient(

@@ -28,7 +28,7 @@ export default function Title() {
   return (
     <h1
       ref={textRef}
-      className="grid font-bold place-content-center z-10 h-screen uppercase text-6xl font-title [clip-path:polygon(0%_0%,100%_0%,100%_100% 0%_100%)] leading:4 "
+      className=" text-neutral-100 grid font-bold place-content-center z-10 uppercase text-6xl font-title [clip-path:polygon(0%_0%,100%_0%,100%_100% 0%_100%)] leading:4 "
     >
       Shubham.Kafle
     </h1>

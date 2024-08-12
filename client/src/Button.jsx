@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-export default function Button() {
+export default function Button({ text }) {
   return (
     <motion.button
       initial={{ "--x": "100%", scale: 1 }}
@@ -23,7 +23,7 @@ export default function Button() {
       className="px-6 py-2 rounded-md relative radial-gradient"
     >
       <span className="text-neutral-100 tracking-wide font-light h-full w-full block relative linear-mask font-burtons">
-        Resume
+        {text}
       </span>
       <span className="block absolute inset-0 rounded-md p-px linear-overlay" />
     </motion.button>
