@@ -24,6 +24,7 @@
     "react-router-dom": "^6.26.0",
     "react-tsparticles": "^2.12.2",
     "split-type": "^0.3.4",
+    "styled-components": "^6.1.12",
     "three": "^0.165.0",
     "tsparticles": "^3.4.0"
   },

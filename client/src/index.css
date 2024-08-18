@@ -52,3 +52,44 @@
     mask-composite: exclude;
     -webkit-mask-composite: xor;
 }
+body, html {
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+.cards {
+  position: absolute;
+  width: 60%;
+  height: 70vh; /* Or adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-family: "Burtons", sans-serif;
+  margin-bottom: 0; /* Remove bottom margin if causing issues */
+}
+
+  
+  .card {
+    position: absolute;
+    width: 60%;
+    height: 70vh;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    border-radius: 7px;
+    margin-bottom: 50px;
+  }
+  .card1{
+    top:0px;
+    left:0px;
+  }
+  .card2{
+    top:35px;
+    left:35px;
+  }
+  .card3{
+    top:70px;
+    left:70px;
+  }

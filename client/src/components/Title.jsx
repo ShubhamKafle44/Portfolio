@@ -28,9 +28,12 @@ export default function Title() {
   return (
     <h1
       ref={textRef}
-      className=" text-neutral-100 grid font-bold place-content-center z-10 uppercase text-6xl font-title [clip-path:polygon(0%_0%,100%_0%,100%_100% 0%_100%)] leading:4 "
+      className=" text-neutral-100 grid font-bold place-content-center z-10 uppercase text-4xl font-title [clip-path:polygon(0%_0%,100%_0%,100%_100% 0%_100%)] leading:4 "
     >
-      Shubham.Kafle
+      <div className="flex justify-between">
+        <div>Shubham.</div>
+        <div>Kafle</div>
+      </div>
     </h1>
   );
 }
