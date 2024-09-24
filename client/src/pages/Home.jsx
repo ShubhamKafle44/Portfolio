@@ -72,7 +72,7 @@ export default function Home() {
             <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center sm:top-3/4 md:top-3/4">
               <Title />
             </div>
-            <div className="absolute flex flex-row space-y-3 z-10 p-2 top-0 left-1/2 transform -translate-x-1/2 sm:flex-row sm:space-y-0 sm:space-x-4 sm:top-0 sm:left-auto sm:transform-none">
+            <div className="absolute flex flex-row space-y-3-hidden z-10 p-2 top-0 left-1/2 transform -translate-x-1/2 sm:flex-row sm:space-y-0-hidden sm:space-x-4 sm:top-0 sm:left-auto sm:transform-none">
               <Button text="Projects" />
               <Button text="About" />
             </div>
