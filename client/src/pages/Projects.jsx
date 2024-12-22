@@ -1,127 +1,78 @@
-import gsap from "gsap";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
-import React, { useRef, useEffect } from "react";
-import ProjectsSection from "../components/ProjectsSection";
-import { FixedHeading } from "../components/styledComponents";
-import LANE_DETECTION from "../../public/images/LANE_DETECTION.jpg";
-import CHESS from "../../public/images/CHESS.jpg";
-import IMAGE_CLASSIFICATION from "../../public/images/IMAGE_CLASSIFICATION.jpg";
-
-// Register GSAP plugins
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+import React from "react";
+import ProjectSection from "../components/ProjectSection";
 
 const Projects = () => {
-  const card = useRef(null);
-  const card1Ref = useRef(null);
-  const card2Ref = useRef(null);
-  const card3Ref = useRef(null);
-  useEffect(() => {
-    console.log("working");
-
-    const scrollTriggerConfig = {
-      trigger: card.current,
-      pin: true,
-      pinSpacing: true,
-      start: "left-=120px left",
-      scrub: 1,
-      end: () => "+=2000",
-    };
-
-    // Create GSAP timeline
-    const t1 = gsap.timeline({
-      scrollTrigger: scrollTriggerConfig,
-    });
-    t1.from(".card1", {
-      xPercent: 75,
-      opacity: 1,
-    });
-    t1.addLabel("card1");
-    t1.to(".card1", {
-      xPercent: 0,
-      opacity: 1,
-    });
-
-    t1.from(".card2", {
-      xPercent: 75,
-      opacity: 0,
-    });
-
-    t1.addLabel("card2");
-
-    t1.to(
-      ".card1",
-      {
-        scale: 0.95,
-        xPercent: -0.5,
-        opacity: 0.15,
-      },
-      "-=0.3"
-    );
-
-    t1.to(".card2", {
-      xPercent: 0,
-      opacity: 1,
-    });
-
-    t1.from(".card3", {
-      xPercent: 75,
-      opacity: 0,
-    });
-
-    t1.addLabel("card3");
-
-    t1.to(
-      ".card2",
-      {
-        scale: 0.98,
-        xPercent: -0.4,
-        opacity: 0.15,
-      },
-      "-=0.3"
-    );
-
-    t1.to(".card3", {
-      xPercent: 0,
-      opacity: 1,
-    });
-    t1.to(".card3", {
-      xPercent: 0,
-      opacity: 1,
-    });
-
-    // Cleanup scrollTrigger
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  const projects = [
+    {
+      title: "Lane Detection Model",
+      description:
+        "Developed a lane detection model using Hough Transform and OpenCV, enhancing accuracy and reliability of lane tracking for autonomous driving. Enhanced the model through Python and Computer Vision for robust detection performance in lane markings.",
+      image: "../../public/images/LANE_DETECTION.jpg",
+      technologies: ["Python", "OpenCV", "Computer Vision"],
+      github: "https://github.com/ShubhamKafle44/finding-lanes",
+    },
+    {
+      title: "Image Classification Model",
+      description:
+        "Developed a machine learning model for image classification using TensorFlow and Python. Improved model performance with Gradient Descent optimization techniques and robust preprocessing with Keras and NumPy, including normalization and data augmentation.",
+      image: "../../public/images/IMAGE_CLASSIFICATION.jpg",
+      technologies: ["Python", "TensorFlow", "Keras", "NumPy"],
+      github:
+        "https://colab.research.google.com/drive/1gPODV3pIS2ShRzlF5_mNufKdt2RWtvxN?usp=sharing",
+    },
+    {
+      title: "Multi-Player Chess Game",
+      description:
+        "Created a multi-player chess game with WebSockets for real-time interaction. Integrated Minimax algorithm with Alpha-Beta Pruning for optimal move selection. Designed and implemented a back-end database schema using Postgres for efficient data management, real-time updates, and historical analysis.",
+      image: "../../public/images/CHESS.jpg",
+      technologies: [
+        "JavaScript",
+        "WebSockets",
+        "PostgreSQL",
+        "Alpha-Beta Pruning",
+      ],
+      github: "https://github.com/ShubhamKafle44/chess-web",
+    },
+    {
+      title: "Content Generator & Sentiment Analysis API",
+      description:
+        "Developed an API-powered content generator using OpenAI's API to create content and analyze its sentiment. Implemented semaphore concepts with Python's ThreadPool for optimized API access control. Integrated CRUD operations using SQLAlchemy and PostgreSQL for robust backend functionality.",
+      image: "../../public/images/CONTENT_GENERATOR.jpg",
+      technologies: [
+        "FastAPI",
+        "OpenAI API",
+        "Python",
+        "SQLAlchemy",
+        "PostgreSQL",
+      ],
+      github: "https://github.com/ShubhamKafle44/translator",
+    },
+    {
+      title: "Personal Website",
+      description:
+        "Developed a progressive web application using React.js and the GSAP animation library for advanced animations. Deployed the application with CI/CD pipelines using GitHub Actions and Cloudflare, automating builds and deployments for streamlined updates.",
+      image: "../../public/images/THREEJS.png",
+      technologies: [
+        "React.js",
+        "Three.js",
+        "GSAP",
+        "GitHub Actions",
+        "Cloudflare",
+      ],
+      github: "https://github.com/ShubhamKafle44/Portfolio",
+    },
+  ];
 
   return (
-    <div className="container flex justify-center items-center h-full">
-      <div className="sticky r-0">
-        <FixedHeading>Projects</FixedHeading>
-      </div>
-      <div className="cards flex" ref={card}>
-        <ProjectsSection
-          title="Lane Detection"
-          text="Created a lane detection model using Hough Transform and OpenCV for autonomous vehicle tracking"
-          image={LANE_DETECTION}
-          className=" card card1"
-          ref={card1Ref}
-        />
-        <ProjectsSection
-          title="Image Classification Model"
-          text="Developed an image classification model with TensorFlow to optimize performance and accuracy."
-          image={IMAGE_CLASSIFICATION}
-          className=" card card2"
-          ref={card2Ref}
-        />
-        <ProjectsSection
-          title="Multi-player Chess Engine:"
-          text="Built a multi-player chess engine in Python using Minimax and a relational database for efficient data management"
-          image={CHESS}
-          className=" card card3"
-          ref={card3Ref}
-        />
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-5xl font-bold text-center mb-8">My Projects</h1>
+        <p className="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+          Explore my latest work and side projects. Each project represents a
+          unique challenge and demonstrates different aspects of my technical
+          skills.
+        </p>
+        <ProjectSection projects={projects} />
       </div>
     </div>
   );
