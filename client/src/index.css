@@ -59,7 +59,7 @@ body, html {
 
 .cards {
   position: absolute;
-  width: 60%;
+  width: 80%;
   height: 70vh; /* Or adjust as needed */
   display: flex;
   justify-content: center;
@@ -72,24 +72,16 @@ body, html {
   
   .card {
     position: absolute;
-    width: 60%;
+    width: 80%;
     height: 70vh;
-    background: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center; /* Center content vertically */
     border-radius: 7px;
     margin-bottom: 50px;
   }
-  .card1{
+  .card1,.card2,.card3{
     top:0px;
     left:0px;
   }
-  .card2{
-    top:35px;
-    left:35px;
-  }
-  .card3{
-    top:70px;
-    left:70px;
-  }
+
