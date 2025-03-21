@@ -109,7 +109,7 @@ const About = () => {
 
   const handleDownload = () => {
     const resumeUrl =
-      "https://drive.google.com/file/d/1ec_K-0Cv-wrK8LIGZdQep8w7Qb7mzob0/view?usp=sharing";
+      "https://drive.google.com/file/d/1VxRRu-hXfM8bHj5tp-mdH_DrGS1C7Mwk/view?usp=sharing";
     window.open(resumeUrl, "_blank");
   };
 

@@ -4,6 +4,43 @@ import ProjectSection from "../components/ProjectSection";
 const Projects = () => {
   const projects = [
     {
+      title: "Mastercard Hackathon: Inclusive Growth Prediction",
+      description:
+        "Developed a Random Forest model to predict Inclusive Growth Scores, identifying key economic and social mobility drivers in Nashville neighborhoods. Leveraged machine learning and correlation analysis to provide actionable insights for entrepreneurship and community development, achieving R-squared values above 0.85.",
+      image: "/images/Hackathon.png",
+      technologies: [
+        "Python",
+        "Machine Learning",
+        "Random Forest",
+        "Data Analysis",
+      ],
+      github: "https://github.com/ShubhamKafle44/hackathon",
+    },
+    {
+      title: "Social Media App for Developers",
+      description:
+        "Built a MERN stack social platform enabling developers to connect, share posts, and engage in discussions. Integrated GitHub API to showcase user repositories and implemented secure JWT authentication with role-based access control to enhance collaboration and data integrity.",
+      image: "/images/DEV_SOCIAL_APP.png",
+      technologies: [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "JWT",
+        "GitHub API",
+      ],
+      github: "https://github.com/ShubhamKafle44/DeveloperConnect",
+    },
+    {
+      title: "AI-Powered Coffee Shop Chatbot",
+      description:
+        "Developed an AI chatbot that reduced manual customer queries by 70%, streamlining coffee shop operations. Deployed LLMs on RunPod to optimize response times under 2 seconds while reducing inference costs by 25%. Built a React Native mobile app integrated with Firebase and RunPod APIs for real-time chatbot interaction.",
+      image: "/images/COFFEE_CHATBOT.jpg",
+      technologies: ["Python", "React Native", "RunPod", "Firebase", "LLM"],
+      github: "https://github.com/ShubhamKafle44/LLM_CHATBOT",
+    },
+
+    {
       title: "Lane Detection Model",
       description:
         "Developed a lane detection model using Hough Transform and OpenCV, enhancing accuracy and reliability of lane tracking for autonomous driving. Enhanced the model through Python and Computer Vision for robust detection performance in lane markings.",
