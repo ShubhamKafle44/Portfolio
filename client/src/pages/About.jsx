@@ -6,6 +6,7 @@ import Skills from "../components/Skills";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+  const RESUME_URL = "https://drive.google.com/file/d/1u6Hofc6yloeRQjRsWit0cELaG_uMF_PW/view?usp=sharing"
   const aboutRef = useRef(null);
   const textRef = useRef(null);
   const imageRef = useRef(null);
@@ -108,8 +109,7 @@ const About = () => {
   };
 
   const handleDownload = () => {
-    const resumeUrl =
-      "https://drive.google.com/file/d/1VxRRu-hXfM8bHj5tp-mdH_DrGS1C7Mwk/view?usp=sharing";
+    const resumeUrl = RESUME_URL
     window.open(resumeUrl, "_blank");
   };
 
