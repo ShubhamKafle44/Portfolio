@@ -73,9 +73,8 @@ const ProjectCard = ({ project, index }) => {
   return (
     <div
       ref={cardRef}
-      className={`flex flex-col ${
-        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-      } gap-8 bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300`}
+      className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        } gap-8 bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300`}
     >
       <div
         ref={imageRef}
