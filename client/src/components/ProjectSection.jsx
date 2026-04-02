@@ -83,7 +83,7 @@ const ProjectCard = ({ project, index }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-64 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-64 md:h-80 lg:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div className="flex gap-4">
