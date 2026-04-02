@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Skills from "../components/Skills";
-
+import Navigation from "../components/Navigation";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -115,6 +115,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 py-20 px-4">
+      <Navigation />
       <div className="max-w-6xl mx-auto">
         <div
           ref={aboutRef}
@@ -135,13 +136,13 @@ const About = () => {
             <div className="flex gap-4">
               <button
                 onClick={handleDownload}
-                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg transition-colors duration-300 text-white"
+                className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-300 text-white"
               >
                 Download CV
               </button>
               <button
                 onClick={handleContact}
-                className="px-6 py-3 border border-purple-600 text-purple-600 hover:bg-purple-600/10 rounded-lg transition-colors duration-300"
+                className="px-6 py-3 border border-indigo-600 text-white hover:bg-indigo-700/10 rounded-lg transition-colors duration-300"
               >
                 Contact Me
               </button>
@@ -214,6 +215,8 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="w-5 h-6"><div />
         </div>
         <Skills />
       </div>
